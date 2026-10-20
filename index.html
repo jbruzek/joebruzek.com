@@ -15,7 +15,7 @@
     <meta property="og:url" content="https://joebruzek.com/">
     <meta name="twitter:card" content="summary_large_image">
 
-    <meta name="theme-color" content="#14281F">
+    <meta name="theme-color" content="#1E3D30">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
@@ -24,102 +24,123 @@
 
 <body>
 
-    <header class="site-header">
-        <nav class="nav" aria-label="Main">
-            <a href="#top" class="nav-name">Joe Bruzek</a>
-            <div class="nav-links">
-                <a href="#headshots">Headshots</a>
-                <a href="#video">Video</a>
-                <a href="#links">Resume &amp; Links</a>
-            </div>
-        </nav>
-    </header>
+    <div class="band-intro">
+        <header class="site-header">
+            <nav class="nav" aria-label="Main">
+                <a href="#top" class="nav-name">Joe Bruzek</a>
+                <div class="nav-links">
+                    <a href="#headshots">Headshots</a>
+                    <a href="#video">Video</a>
+                    <a href="#links">Resume &amp; Links</a>
+                </div>
+            </nav>
+        </header>
 
-    <main id="top">
-
-        <section class="intro">
+        <section id="top" class="intro">
+            <h1 class="intro-name"><span class="intro-shape" aria-hidden="true"></span>Joe<br>Bruzek</h1>
             <div class="intro-copy">
-                <h1>Joe Bruzek</h1>
-                <p class="bio">NYC based actor. Training at The Barrow Group in Manhattan for roles in film and
-                    television. Beyond acting, Joe is a prolific soccer player and movie watcher. He has worked as a
-                    software engineer for over a decade, and has a passion for tinkering and making, from oil painting
-                    to sewing and garment making.</p>
+                <p>NYC based actor. Training at The Barrow Group in Manhattan for roles in film and television.</p>
+                <p>Beyond acting, Joe is a prolific soccer player and movie watcher. He has worked as a software
+                    engineer for over a decade, and has a passion for tinkering and making, from oil painting to
+                    sewing and garment making.</p>
             </div>
-            <div class="intro-photo">
-                <picture>
+        </section>
+    </div>
+
+    <main>
+
+        <section id="headshots" class="band-headshots" aria-label="Headshots">
+            <div class="headshots">
+                <div class="headshots-grid">
+                    <a class="headshot" href="assets/images/full/joebruzek-commercial-full.jpg" target="_blank"
+                        rel="noopener noreferrer" aria-label="Open full-resolution commercial headshot in a new tab">
+                        <picture>
+                            <source srcset="assets/images/joebruzek-commercial.webp" type="image/webp">
+                            <img src="assets/images/joebruzek-commercial.jpg" alt="Joe Bruzek, commercial headshot"
+                                width="900" height="1350" loading="lazy">
+                        </picture>
+                        <span class="headshot-label" aria-hidden="true">View full size ↗</span>
+                    </a>
+                    <a class="headshot" href="assets/images/full/joebruzek-dramatic-full.jpg" target="_blank"
+                        rel="noopener noreferrer" aria-label="Open full-resolution dramatic headshot in a new tab">
+                        <picture>
+                            <source srcset="assets/images/joebruzek-dramatic.webp" type="image/webp">
+                            <img src="assets/images/joebruzek-dramatic.jpg" alt="Joe Bruzek, dramatic headshot"
+                                width="900" height="1350" loading="lazy">
+                        </picture>
+                        <span class="headshot-label" aria-hidden="true">View full size ↗</span>
+                    </a>
+                    <a class="headshot" href="assets/images/full/joebruzek-natural-full.jpg" target="_blank"
+                        rel="noopener noreferrer" aria-label="Open full-resolution natural headshot in a new tab">
+                        <picture>
+                            <source srcset="assets/images/joebruzek-natural.webp" type="image/webp">
+                            <img src="assets/images/joebruzek-natural.jpg" alt="Joe Bruzek, natural headshot"
+                                width="900" height="1350" loading="lazy">
+                        </picture>
+                        <span class="headshot-label" aria-hidden="true">View full size ↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="video" class="band-video" aria-label="Video">
+            <div class="video">
+                <div class="video-frame">
+                    <iframe src="https://www.youtube-nocookie.com/embed/b-_MYp529Pw" title="Monologue Reel"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-caption">
+                    <span>Joe Bruzek Monologue Reel</span>
+                    <a href="https://youtu.be/b-_MYp529Pw" class="muted" target="_blank"
+                        rel="noopener noreferrer">Watch on YouTube ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="links" class="band-links" aria-label="Resume and links">
+            <div class="links">
+                <picture class="links-photo">
                     <source srcset="assets/images/joebruzek-primary.webp" type="image/webp">
                     <img src="assets/images/joebruzek-primary.jpg"
                         alt="Joe Bruzek celebrating after a half marathon, posing with the Chiquita banana mascot"
-                        width="800" height="1200" fetchpriority="high">
+                        width="800" height="1200" loading="lazy">
                 </picture>
-            </div>
-        </section>
-
-        <section id="headshots" class="headshots" aria-label="Headshots">
-            <div class="headshots-grid">
-                <a class="headshot" href="assets/images/full/joebruzek-commercial-full.jpg" target="_blank"
-                    rel="noopener noreferrer" aria-label="Open full-resolution commercial headshot in a new tab">
-                    <picture>
-                        <source srcset="assets/images/joebruzek-commercial.webp" type="image/webp">
-                        <img src="assets/images/joebruzek-commercial.jpg" alt="Joe Bruzek, commercial headshot"
-                            width="900" height="1350" loading="lazy">
-                    </picture>
-                    <span class="headshot-label" aria-hidden="true">View full size ↗</span>
-                </a>
-                <a class="headshot" href="assets/images/full/joebruzek-dramatic-full.jpg" target="_blank"
-                    rel="noopener noreferrer" aria-label="Open full-resolution dramatic headshot in a new tab">
-                    <picture>
-                        <source srcset="assets/images/joebruzek-dramatic.webp" type="image/webp">
-                        <img src="assets/images/joebruzek-dramatic.jpg" alt="Joe Bruzek, dramatic headshot" width="900"
-                            height="1350" loading="lazy">
-                    </picture>
-                    <span class="headshot-label" aria-hidden="true">View full size ↗</span>
-                </a>
-                <a class="headshot" href="assets/images/full/joebruzek-natural-full.jpg" target="_blank"
-                    rel="noopener noreferrer" aria-label="Open full-resolution natural headshot in a new tab">
-                    <picture>
-                        <source srcset="assets/images/joebruzek-natural.webp" type="image/webp">
-                        <img src="assets/images/joebruzek-natural.jpg" alt="Joe Bruzek, natural headshot" width="900"
-                            height="1350" loading="lazy">
-                    </picture>
-                    <span class="headshot-label" aria-hidden="true">View full size ↗</span>
-                </a>
-            </div>
-        </section>
-
-        <section id="video" class="video" aria-label="Video">
-            <div class="video-frame">
-                <iframe src="https://www.youtube-nocookie.com/embed/b-_MYp529Pw" title="Monologue Reel" loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="video-caption">
-                <span>Monologue Reel</span>
-                <a href="https://youtu.be/b-_MYp529Pw" class="muted" target="_blank" rel="noopener noreferrer">Watch
-                    on YouTube ↗</a>
-            </div>
-        </section>
-
-        <section id="links" class="links" aria-label="Resume and links">
-            <div class="links-list">
-                <a href="assets/JoeBruzek-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume <span
-                        class="arrow" aria-hidden="true">↗</span></a>
-                <a href="https://www.backstage.com/tal/joebruzek/" target="_blank" rel="noopener noreferrer">Backstage
-                    <span class="arrow" aria-hidden="true">↗</span></a>
-                <a href="https://resumes.actorsaccess.com/joebruzek" target="_blank" rel="noopener noreferrer">Actors
-                    Access <span class="arrow" aria-hidden="true">↗</span></a>
-                <a href="https://www.instagram.com/joeabruzek" target="_blank" rel="noopener noreferrer">Instagram
-                    <span class="arrow" aria-hidden="true">↗</span></a>
+                <div class="links-list">
+                    <a href="assets/JoeBruzek-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume <span
+                            class="arrow" aria-hidden="true">↗</span></a>
+                    <a href="https://www.backstage.com/tal/joebruzek/" target="_blank"
+                        rel="noopener noreferrer">Backstage <span class="arrow" aria-hidden="true">↗</span></a>
+                    <a href="https://resumes.actorsaccess.com/joebruzek" target="_blank"
+                        rel="noopener noreferrer">Actors Access <span class="arrow" aria-hidden="true">↗</span></a>
+                    <a href="https://www.instagram.com/joeabruzek" target="_blank"
+                        rel="noopener noreferrer">Instagram <span class="arrow" aria-hidden="true">↗</span></a>
+                    <button type="button" id="email-link" aria-label="Copy email address to clipboard">Email
+                        <span class="email-status" aria-live="polite">
+                            <svg class="email-icon" aria-hidden="true" width="17" height="17" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                                <path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"></path>
+                            </svg>
+                            <span class="email-copied-text">Copied ✓</span>
+                        </span>
+                    </button>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="site-footer">
-        <span>© 2026 Joe Bruzek</span>
-        <a href="#top">Back to top ↑</a>
+    <footer class="band-footer">
+        <div class="site-footer">
+            <span>© 2026 Joe Bruzek</span>
+            <a href="#top">Back to top ↑</a>
+        </div>
     </footer>
 
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
