@@ -85,7 +85,8 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+.links-list button:hover {
   color: var(--accent);
 }
 
