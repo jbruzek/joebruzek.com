@@ -154,6 +154,13 @@ button:focus-visible {
   letter-spacing: -0.015em;
 }
 
+@media (max-width: 480px) {
+  .intro-name {
+    /* 12vw bottoms out at the 4.5rem floor on every phone width, rendering flat and small; this scales within the phone range instead */
+    font-size: clamp(5.75rem, 24vw, 6.5rem);
+  }
+}
+
 .intro-shape {
   position: absolute;
   z-index: -1;
@@ -306,6 +313,14 @@ button:focus-visible {
   max-width: 100%;
   aspect-ratio: 2 / 3;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .links-photo {
+    /* Below this width the row wraps and the photo is alone on its line; without this it stays
+       pinned at its 300px desktop basis instead of filling the row like the headshot grid does. */
+    flex-basis: 100%;
+  }
 }
 
 .links-photo img {
