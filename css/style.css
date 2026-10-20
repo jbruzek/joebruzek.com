@@ -107,13 +107,8 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 8px 32px;
-}
-
-.nav-name {
-  font-family: "Instrument Serif", Georgia, serif;
-  font-size: 24px;
 }
 
 .nav-links {
