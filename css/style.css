@@ -148,23 +148,6 @@ button:focus-visible {
   min-width: 0;
 }
 
-/* ---- Placeholders (swap for <img> once real photos exist) ---- */
-.placeholder {
-  background: var(--placeholder-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-align: center;
-}
-.placeholder--portrait {
-  aspect-ratio: 4 / 5;
-  width: 100%;
-}
-
 /* ---- Headshots ---- */
 .headshots {
   max-width: var(--max);
