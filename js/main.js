@@ -17,3 +17,9 @@
     }, 2000);
   });
 })();
+
+(function () {
+  var yearEl = document.getElementById("copyright-year");
+  if (!yearEl) return;
+  yearEl.textContent = new Date().getFullYear();
+})();
