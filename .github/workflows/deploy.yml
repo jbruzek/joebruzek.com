@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Stamp the commit ID onto asset links so Cloudflare and browsers fetch fresh copies after each deploy
+      - name: Add cache-busting versions
+        run: |
+          version="${GITHUB_SHA::7}"
+          sed -i \
+            -e "s|href=\"css/style.css\"|href=\"css/style.css?v=${version}\"|" \
+            -e "s|src=\"js/main.js\"|src=\"js/main.js?v=${version}\"|" \
+            index.html
+          grep -q "style.css?v=${version}" index.html
+          grep -q "main.js?v=${version}" index.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
