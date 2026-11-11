@@ -133,18 +133,43 @@ button:focus-visible {
 .intro {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 88px 24px 128px;
+  padding: 88px clamp(24px, 8vw, 94px) 112px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.intro-lead {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 40px 112px;
+  gap: 56px;
+}
+
+/* Side by side, the columns keep their limited widths; stacked (below this), each fills the screen width */
+@media (min-width: 64em) {
+  .intro {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  .intro-lead {
+    flex: 0 1 22rem;
+    min-width: 0;
+    align-items: flex-end;
+  }
+
+  .intro-copy {
+    flex: 1 1 26rem;
+    max-width: 38rem;
+  }
 }
 
 .intro-name {
   position: relative;
   isolation: isolate;
-  flex: 0 0 auto;
   padding-top: 0.15em;
   text-align: right;
   font-family: "Instrument Serif", Georgia, serif;
@@ -172,14 +197,39 @@ button:focus-visible {
   background: var(--shape);
 }
 
+.intro-recent {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro-recent p {
+  min-width: 0;
+  font-size: 16px;
+  color: var(--bio);
+}
+
+.intro-recent a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.intro-recent picture {
+  flex: 0 0 auto;
+  width: 150px;
+  max-width: 42%;
+  transform: rotate(3deg);
+}
+
 .intro-copy {
-  flex: 1 1 340px;
-  max-width: 42rem;
   min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  font-size: 19px;
+  font-size: 18px;
+  line-height: 1.75;
   color: var(--bio);
 }
 
